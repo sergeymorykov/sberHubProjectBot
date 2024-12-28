@@ -7,11 +7,11 @@ import types
 
 # Укажите токен и ссылки
 token = '7866617284:AAHDOfPQJdKmufOdRgFza6XA8ZWRHPeA_Yc'
-server_url = 'https://ought-guest-two-significant.trycloudflare.com/'
+server_url = 'https://dev.bro-js.ru/'
 signUpUrl = server_url + 'sberhubproject/signup'
 editUserUrl = server_url + 'sberhubproject/edit-user'
-eventsUrl = 'https://sergeymorykov-tg-web-app-react-72ec.twc1.net/events'
-profilesUrl = 'https://sergeymorykov-tg-web-app-react-72ec.twc1.net/user-list'
+eventsUrl = server_url + 'sberhubproject/events'
+profilesUrl = server_url + 'sberhubproject/user-list'
 # Создаем экземпляр бота
 bot = telebot.TeleBot(token)
 
@@ -65,7 +65,6 @@ def handle_start(message):
     # Кнопка для просмотра событий
     markup.add(InlineKeyboardButton("📅 View Events", web_app=WebAppInfo(url=eventsUrl)))
     markup.add(InlineKeyboardButton("📅 View list profile", web_app=WebAppInfo(url=profilesUrl)))
-
     
     bot.send_message(message.chat.id, "Пожалуйста, зарегистрируйтесь или посмотрите события", reply_markup=markup)
 
