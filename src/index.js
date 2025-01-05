@@ -17,4 +17,6 @@ bot.start((ctx) =>
   )
 );
 
-bot.launch();
+bot.launch({
+  polling: true,
+});

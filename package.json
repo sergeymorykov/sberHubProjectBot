@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "scripts": {
-  "build": "webpack",
-  "start": "node dist/bundle.js"
+  "build": "babel src --out-dir dist",
+  "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,9 @@
     "telegraf": "^4.16.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
   }
