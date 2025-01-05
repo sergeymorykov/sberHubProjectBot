@@ -1,4 +1,18 @@
 {
+  "name": "sberHubProjectBot",
+    "version": "0.1.0",
+    "main": "./src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npm run start",
+        "build": "npm run clean && brojs build --dev",
+        "build:prod": "npm run clean && brojs build",
+        "clean": "rimraf dist",
+        "eslint": "eslint ."
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
   "dependencies": {
     "telegraf": "^4.16.3"
   }
